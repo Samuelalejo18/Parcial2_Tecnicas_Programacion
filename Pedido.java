@@ -1,19 +1,26 @@
-import java.util.LinkedList;
 public class Pedido  {
 private Producto producto;
-private Cliente cliente;
+private int cliente;
  private int numeroDeProductos;
-public Pedido( Producto producto, Cliente cliente){
+    /*
+     * Complejidad temporal: O(n) Tiempo lineal
+     */
+public Pedido(Producto producto, Producto numeroDeProductos, int cliente ){
 
     this.producto=producto;
     this.cliente=cliente;
+    this.numeroDeProductos= numeroDeProductos.getCantidadInventario();
 
 }
-
-    public Cliente getCliente() {
+    /*
+     * Complejidad temporal: O(n) Tiempo lineal
+     */
+    public int getCliente() {
         return cliente;
     }
-
+    /*
+     * Complejidad temporal: O(n) Tiempo lineal
+     */
     public Producto getProducto() {
         return producto;
     }
